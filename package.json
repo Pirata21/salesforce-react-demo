@@ -1,0 +1,25 @@
+{
+  "name": "salesforce-react-demo",
+  "version": "1.0.0",
+  "description": "lorem ipsum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pirata21/salesforce-react-demo.git"
+  },
+  "keywords": [
+    "react",
+    "salesforce",
+    "redux",
+    "remoting"
+  ],
+  "author": "Pirata21",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pirata21/salesforce-react-demo/issues"
+  },
+  "homepage": "https://github.com/Pirata21/salesforce-react-demo#readme"
+}
