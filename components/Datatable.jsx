@@ -24,7 +24,7 @@ class Datatable extends React.Component {
     this.props.dispatch(qryAccts());
   }
 
-  onChangeInput(term) {
+  _onChangeInput(term) {
     if (this.state.timer) {
      clearInterval(this.state.timer); 
     }
@@ -35,7 +35,9 @@ class Datatable extends React.Component {
     
   }
 
-
+  _filterAccounts(account) {
+     return account.Name.toUpperCase().indexOf(this.state.term.toUpperCase()) > -1;
+  }
 
   render () {
     return (
@@ -43,7 +45,7 @@ class Datatable extends React.Component {
         <div class="slds-form-element">
           <label className="slds-form-element__label">Search Account</label>
           <div className="slds-form-element__control">
-            <input  onChange={(event) => this.onChangeInput(event.currentTarget.value)} className="slds-input" placeholder="Search Account"/>          
+            <input  onChange={(event) => this._onChangeInput(event.currentTarget.value)} className="slds-input" placeholder="Search Account"/>          
           </div>
         </div>    
       <div className="slds-text-heading--medium">Accounts</div>
@@ -60,7 +62,7 @@ class Datatable extends React.Component {
             </tr>
           </thead>
           <tbody>
-           {this.props.accts.filter( x =>  x.Name.toUpperCase().indexOf(this.state.term.toUpperCase()) > -1 ).map((v,i) =>
+           {this.props.accts.filter(this._filterAccounts.bind(this)).map((v,i) =>
              <tr className="slds-hint-parent" key={i}>
                <td className="slds-truncate">
                  {v.Name}

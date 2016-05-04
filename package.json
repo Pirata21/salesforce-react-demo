@@ -6,7 +6,9 @@
   "scripts": {
     "deploySR": "7z a -tzip \"myreact.zip\" \"bundle.js\" \"bundle.js.map\" | node deployStaticResource.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node node_modules/.bin/webpack-dev-server --https --content-base build/"
+    "start": "node node_modules/.bin/webpack-dev-server --https --content-base build/",
+    "build": "node node_modules/.bin/webpack",
+    "predeploySR": "npm run build" 
   },
   "repository": {
     "type": "git",
@@ -47,6 +49,7 @@
     "localtunnel": "^1.8.1",
     "node-sass": "^3.4.2",
     "react-transform-hmr": "^0.1.4",
+    "rebuild": "^0.1.2",
     "resolve-url-loader": "^1.4.2",
     "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
