@@ -34,6 +34,18 @@ class Datatable extends React.Component {
                 <div className="slds-truncate"> Name
                 </div>
               </th>
+              <th className="slds-is-sortable" scope="col">
+                <div className="slds-truncate"> Id
+                </div>
+              </th>
+              <th className="slds-is-sortable" scope="col">
+                <div className="slds-truncate"> Website
+                </div>
+              </th>
+              <th className="slds-is-sortable" scope="col">
+                <div className="slds-truncate"> Owner
+                </div>
+              </th>
               <th className="slds-cell-shrink"></th>
             </tr>
           </thead>
@@ -42,6 +54,15 @@ class Datatable extends React.Component {
              <tr className="slds-hint-parent" key={i}>
                <td className="slds-truncate">
                  {v.Name}
+               </td>
+               <td className="slds-truncate">
+                 {v.Id}
+               </td>
+               <td className="slds-truncate">
+                 {v.Website}
+               </td>
+               <td className="slds-truncate">
+                 {v.Owner.Name}
                </td>
              </tr>
            )}

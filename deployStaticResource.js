@@ -25,8 +25,8 @@ var upsertMetadata = function(mdPkg)
 {
   return conn.metadata.upsert('StaticResource', mdPkg)
 }
-
-conn.login('username@mail.com', 'password')
+conn.login('meetup@uysdug.com', 'Salesforce1')
+//conn.login('username@mail.com', 'password')
 
 .then(createMetadataPkg)
 .then(upsertMetadata)

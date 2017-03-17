@@ -11,8 +11,9 @@ import { accts } from './reducers/accounts';
 //Import Action Constants
 import * as cons from './constants/index'
 
-//Import React Component
+//Import React Components
 import Datatable from './components/Datatable';
+import Search from './components/Search';
 
 
 const reducer = combineReducers({accts:accts})
@@ -27,6 +28,7 @@ ReactDOM.render(
   <Provider store={store}>
       <div>
         <h1>Demo</h1>
+        <Search />
         <Datatable />
       </div>
   </Provider>
