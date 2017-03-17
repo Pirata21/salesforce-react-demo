@@ -26,13 +26,13 @@ class Datatable extends React.Component {
 
   _onChangeInput(term) {
     if (this.state.timer) {
-     clearInterval(this.state.timer); 
+     clearInterval(this.state.timer);
     }
     var self = this;
     var timer = setTimeout(function(){
       self.setState({term, timer});
     },300);
-    
+
   }
 
   _filterAccounts(account) {
@@ -45,9 +45,9 @@ class Datatable extends React.Component {
         <div class="slds-form-element">
           <label className="slds-form-element__label">Search Account</label>
           <div className="slds-form-element__control">
-            <input  onChange={(event) => this._onChangeInput(event.currentTarget.value)} className="slds-input" placeholder="Search Account"/>          
+            <input  onChange={(event) => this._onChangeInput(event.currentTarget.value)} className="slds-input" placeholder="Search Account"/>
           </div>
-        </div>    
+        </div>
       <div className="slds-text-heading--medium">Accounts</div>
 
         <table className="slds-table slds-table--bordered">
